@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -15,13 +15,75 @@
 <!--        android:text="블루투스 기기 검색"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+    <TextView
+        android:id="@+id/tvSearchList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색된 기기 목록"
+        style="@style/textTitleStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewDevices"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSearchList">
     </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="30dp">-->
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/rcViewList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            style="@style/BluetoothSearchButton"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="30dp">-->
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:id="@+id/deviceName"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Device Name"-->
+<!--                    android:textSize="38sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+<!--                </com.google.android.material.textview.MaterialTextView>-->
+
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:id="@+id/deviceAddress"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="00:11:22:33:44:55"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="#7265E3"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/deviceName"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/deviceName">-->
+<!--                </com.google.android.material.textview.MaterialTextView>-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

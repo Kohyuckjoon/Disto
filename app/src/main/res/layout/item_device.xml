@@ -4,35 +4,96 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!--    <TextView-->
+<!--        android:id="@+id/textTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="연결 가능한 기기"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+<!--    </TextView>-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:id="@+id/deviceName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Device Name"
-            android:textSize="18sp"
-            android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rcViewList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/BluetoothSearchButton"
+            android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/deviceAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00:11:22:33:44:55"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/deviceName"
-            app:layout_constraintTop_toTopOf="@+id/deviceName"
-            app:layout_constraintBottom_toBottomOf="@+id/deviceName"
-            android:layout_marginLeft="80dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/deviceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Name"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/deviceAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:11:22:33:44:55"
+                    android:textSize="20sp"
+                    android:textColor="#7265E3"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/deviceName"
+                    app:layout_constraintTop_toBottomOf="@+id/deviceName">
+                </com.google.android.material.textview.MaterialTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/deviceName"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Device Name"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/deviceAddress"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="00:11:22:33:44:55"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/deviceName"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/deviceName"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/deviceName"-->
+<!--            android:layout_marginLeft="80dp"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

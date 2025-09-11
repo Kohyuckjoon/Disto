@@ -126,4 +126,24 @@ class DistoConnection : AppCompatActivity() {
         } catch (_: Exception) {
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("khj", "android lifeCycle test ----> onResume 호출")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("khj", "android lifeCycle test ----> onStart 호출")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("khj", "android lifeCycle test ----> onPause 호출")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.e("khj", "android lifeCycle test ----> onStop 호출")
+    }
 }

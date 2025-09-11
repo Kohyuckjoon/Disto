@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BluetoothSearchButton" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">12dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">35dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+
+    </style>
+
+     <style name="ButtonList" parent="Widget.MaterialComponents.CardView">
+         <item name="strokeWidth">2dp</item>
+         <item name="cardCornerRadius">35dp</item>
+         <item name="cardBackgroundColor">@color/white</item>
+     </style>
+
+    <!--Button 공통-->
+    <style name="buttonCommonMargin">
+        <item name="android:layout_margin">30dp</item>
+    </style>
+
+    <style name="textTitleStyle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">30dp</item>
+    </style>
+</resources>
