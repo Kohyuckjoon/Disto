@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="manhole_type">
+        <item>1개</item>
+        <item>2개</item>
+        <item>3개</item>
+        <item>4개</item>
+    </string-array>
+</resources>

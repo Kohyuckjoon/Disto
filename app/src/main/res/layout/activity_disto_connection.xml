@@ -31,13 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="8dp"
+        android:padding="3dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSearchList">
+        app:layout_constraintTop_toBottomOf="@+id/tvSearchList"
+        tools:listitem="@layout/item_device">
     </androidx.recyclerview.widget.RecyclerView>
 
 
