@@ -21,13 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YSCDisto">
         <activity
-            android:name=".StartMeasurement"
-            android:exported="false" />
-        <activity
             android:name=".DistoConnection"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
