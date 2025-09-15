@@ -4,31 +4,124 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.disto.MeasurementListFragment">
+    tools:context=".ui.disto.MeasurementListFragment"
+    android:background="@color/white">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/measurement_list_fragment_title"
+            android:textSize="@dimen/text_view_title_size_b"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:layout_marginStart="30dp"
-                android:text="@string/measurement_list_fragment_title"
-                android:textSize="@dimen/text_view_title_size_b"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/black" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_measurement_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:cardElevation="12dp"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="17dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:layout_margin="30dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </ScrollView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mc_item_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="측정 데이터 목록 1"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_disto_conn"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_measure_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mc_item_list"
+                    android:textSize="@dimen/tv_measure_time_title"
+                    android:text="25.09.09 15:20"
+                    android:layout_marginEnd="30dp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_manhole_type_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_measure_manhol_type_title_new"
+                    app:layout_constraintStart_toStartOf="@+id/tv_measure_time"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_measure_time"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_measure_time"
+                    android:text="맨홀 타입">
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_colon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textStyle="bold"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/tv_measure_manhol_type_title_new"
+                    app:layout_constraintStart_toEndOf="@+id/tv_manhole_type_title"
+                    app:layout_constraintTop_toTopOf="@+id/tv_manhole_type_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_manhole_type_title">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_manhole_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/tv_measure_manhol_type_title_new"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintTop_toTopOf="@+id/tv_colon"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_colon"
+                    app:layout_constraintStart_toEndOf="@+id/tv_colon"
+                    app:layout_constraintEnd_toEndOf="@id/tv_measure_time">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="측정된 데이터 목록을 확인하실 수 있습니다."
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="@dimen/tv_disto_conn_dis"
+                    android:textStyle="bold"
+                    android:textColor="#7265E3"
+                    app:layout_constraintStart_toStartOf="@+id/mc_item_list"
+                    app:layout_constraintTop_toBottomOf="@+id/mc_item_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

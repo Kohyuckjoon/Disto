@@ -20,4 +20,9 @@
     <!-- Bluetooth List -->
     <dimen name="blue_tooth_list_title">20sp</dimen>
     <dimen name="blue_tooth_list_title_ip">13sp</dimen>
+
+    <!-- 측정 데이터 리스트 맨홀 타입 텍스트 -->
+    <dimen name="tv_measure_manhol_type_title">10sp</dimen>
+    <dimen name="tv_measure_manhol_type_title_new">15sp</dimen>
+    <dimen name="tv_measure_time_title">15sp</dimen>
 </resources>

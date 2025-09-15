@@ -9,6 +9,7 @@ import com.example.yscdisto.ui.disto.DistoConnectFragment
 import com.example.yscdisto.R
 import com.example.yscdisto.ui.disto.StartMeasurementFragment
 import com.example.yscdisto.databinding.ActivityMainBinding
+import com.example.yscdisto.ui.disto.MeasurementListFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var dataBinding : ActivityMainBinding
@@ -36,7 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         dataBinding.mcMeasurementList.setOnClickListener {
-
+            supportFragmentManager.commit {
+                replace(R.id.fl_measurement_list, MeasurementListFragment())
+                addToBackStack(null)
+            }
         }
 
         dataBinding.mcMeasurement.setOnClickListener {

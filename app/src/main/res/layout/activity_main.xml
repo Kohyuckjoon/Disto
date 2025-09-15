@@ -276,6 +276,16 @@
         app:layout_constraintBottom_toBottomOf="parent">
     </androidx.fragment.app.FragmentContainerView>
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fl_measurement_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.fragment.app.FragmentContainerView>
+
     <!-- 관경 측정 -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fl_start_measurement"
