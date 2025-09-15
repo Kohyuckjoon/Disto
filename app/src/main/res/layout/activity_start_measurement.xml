@@ -22,143 +22,144 @@
                 android:layout_marginTop="35dp"
                 android:layout_marginStart="30dp"
                 android:text="측정값"
-                android:textSize="40sp"
+                android:textSize="@dimen/text_view_title_size_b"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black" />
 
             <!-- 측정 상태 표시 줄 -->
-<!--            <com.google.android.material.card.MaterialCardView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:cardElevation="12dp"-->
-<!--                app:strokeWidth="0dp"-->
-<!--                app:cardCornerRadius="40dp"-->
-<!--                app:cardBackgroundColor="@color/white"-->
-<!--                android:layout_marginRight="10dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="@id/tv_title"-->
-<!--                app:layout_constraintBottom_toBottomOf="@+id/tv_title">-->
+            <!--            <com.google.android.material.card.MaterialCardView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:cardElevation="12dp"-->
+            <!--                app:strokeWidth="0dp"-->
+            <!--                app:cardCornerRadius="40dp"-->
+            <!--                app:cardBackgroundColor="@color/white"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/tv_title"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/tv_title">-->
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/cl_top_mc"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:gravity="center">-->
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/cl_top_mc"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:gravity="center">-->
 
-<!--                    <com.google.android.material.card.MaterialCardView-->
-<!--                        android:id="@+id/card_mc_1"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="7dp"-->
-<!--                        app:cardElevation="12dp"-->
-<!--                        app:strokeWidth="1dp"-->
-<!--                        app:cardCornerRadius="35dp"-->
-<!--                        app:cardBackgroundColor="@color/white">-->
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:id="@+id/card_mc_1"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="7dp"-->
+            <!--                        app:cardElevation="12dp"-->
+            <!--                        app:strokeWidth="1dp"-->
+            <!--                        app:cardCornerRadius="35dp"-->
+            <!--                        app:cardBackgroundColor="@color/white">-->
 
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_mc_1"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="측 정"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:layout_marginLeft="15dp"-->
-<!--                            android:layout_marginRight="15dp"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp" />-->
-<!--                    </com.google.android.material.card.MaterialCardView>-->
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:id="@+id/tv_mc_1"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="측 정"-->
+            <!--                            android:textStyle="bold"-->
+            <!--                            android:textSize="18sp"-->
+            <!--                            android:layout_marginLeft="15dp"-->
+            <!--                            android:layout_marginRight="15dp"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_marginBottom="5dp" />-->
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="7dp"-->
-<!--                        android:src="@drawable/vector32" />-->
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="7dp"-->
+            <!--                        android:src="@drawable/vector32" />-->
 
-<!--                    <com.google.android.material.card.MaterialCardView-->
-<!--                        android:id="@+id/card_mc_2"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="7dp"-->
-<!--                        app:cardElevation="12dp"-->
-<!--                        app:strokeWidth="1dp"-->
-<!--                        app:cardCornerRadius="35dp"-->
-<!--                        app:cardBackgroundColor="@color/white">-->
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:id="@+id/card_mc_2"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="7dp"-->
+            <!--                        app:cardElevation="12dp"-->
+            <!--                        app:strokeWidth="1dp"-->
+            <!--                        app:cardCornerRadius="35dp"-->
+            <!--                        app:cardBackgroundColor="@color/white">-->
 
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_mc_2"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="측 정"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:layout_marginLeft="15dp"-->
-<!--                            android:layout_marginRight="15dp"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp" />-->
-<!--                    </com.google.android.material.card.MaterialCardView>-->
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:id="@+id/tv_mc_2"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="측 정"-->
+            <!--                            android:textStyle="bold"-->
+            <!--                            android:textSize="18sp"-->
+            <!--                            android:layout_marginLeft="15dp"-->
+            <!--                            android:layout_marginRight="15dp"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_marginBottom="5dp" />-->
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/vector32"-->
-<!--                        android:layout_marginLeft="7dp" />-->
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:src="@drawable/vector32"-->
+            <!--                        android:layout_marginLeft="7dp" />-->
 
-<!--                    <com.google.android.material.card.MaterialCardView-->
-<!--                        android:id="@+id/card_mc_3"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        app:cardElevation="12dp"-->
-<!--                        app:strokeWidth="1dp"-->
-<!--                        app:cardCornerRadius="35dp"-->
-<!--                        android:layout_marginLeft="7dp"-->
-<!--                        app:cardBackgroundColor="@color/white">-->
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:id="@+id/card_mc_3"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        app:cardElevation="12dp"-->
+            <!--                        app:strokeWidth="1dp"-->
+            <!--                        app:cardCornerRadius="35dp"-->
+            <!--                        android:layout_marginLeft="7dp"-->
+            <!--                        app:cardBackgroundColor="@color/white">-->
 
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/mcComplete3"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="측 정"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:layout_marginLeft="15dp"-->
-<!--                            android:layout_marginRight="15dp"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp" />-->
-<!--                    </com.google.android.material.card.MaterialCardView>-->
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:id="@+id/mcComplete3"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="측 정"-->
+            <!--                            android:textStyle="bold"-->
+            <!--                            android:textSize="18sp"-->
+            <!--                            android:layout_marginLeft="15dp"-->
+            <!--                            android:layout_marginRight="15dp"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_marginBottom="5dp" />-->
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/vector32"-->
-<!--                        android:layout_marginLeft="7dp" />-->
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:src="@drawable/vector32"-->
+            <!--                        android:layout_marginLeft="7dp" />-->
 
-<!--                    <com.google.android.material.card.MaterialCardView-->
-<!--                        android:id="@+id/card_mc_4"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        app:cardElevation="12dp"-->
-<!--                        app:strokeWidth="1dp"-->
-<!--                        app:cardCornerRadius="35dp"-->
-<!--                        app:cardBackgroundColor="@color/white"-->
-<!--                        android:layout_marginLeft="7dp"-->
-<!--                        android:layout_marginRight="5dp">-->
+            <!--                    <com.google.android.material.card.MaterialCardView-->
+            <!--                        android:id="@+id/card_mc_4"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        app:cardElevation="12dp"-->
+            <!--                        app:strokeWidth="1dp"-->
+            <!--                        app:cardCornerRadius="35dp"-->
+            <!--                        app:cardBackgroundColor="@color/white"-->
+            <!--                        android:layout_marginLeft="7dp"-->
+            <!--                        android:layout_marginRight="5dp">-->
 
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_mc_4"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="측 정"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:layout_marginLeft="15dp"-->
-<!--                            android:layout_marginRight="15dp"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp" />-->
-<!--                    </com.google.android.material.card.MaterialCardView>-->
-<!--                </LinearLayout>-->
-<!--            </com.google.android.material.card.MaterialCardView>-->
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:id="@+id/tv_mc_4"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="측 정"-->
+            <!--                            android:textStyle="bold"-->
+            <!--                            android:textSize="18sp"-->
+            <!--                            android:layout_marginLeft="15dp"-->
+            <!--                            android:layout_marginRight="15dp"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_marginBottom="5dp" />-->
+            <!--                    </com.google.android.material.card.MaterialCardView>-->
+            <!--                </LinearLayout>-->
+            <!--            </com.google.android.material.card.MaterialCardView>-->
 
             <!-- 정보값 -->
             <LinearLayout
@@ -180,10 +181,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="맨홀 타입"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/text_view_title_size_small"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/black" />
 
                     <View
                         android:layout_width="0dp"
@@ -202,44 +203,44 @@
                             tools:listitem="manhole_type"
                             android:entries="@array/manhole_type">
                         </Spinner>
-<!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                            android:id="@+id/mRBtn01"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="1개"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="20sp"-->
-<!--                            android:layout_marginRight="30dp"-->
-<!--                            android:gravity="center_vertical" />-->
+                        <!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
+                        <!--                            android:id="@+id/mRBtn01"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="1개"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:layout_marginRight="30dp"-->
+                        <!--                            android:gravity="center_vertical" />-->
 
-<!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                            android:id="@+id/mRBtn02"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="2개"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="20sp"-->
-<!--                            android:layout_marginRight="30dp"-->
-<!--                            android:gravity="center_vertical" />-->
+                        <!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
+                        <!--                            android:id="@+id/mRBtn02"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="2개"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:layout_marginRight="30dp"-->
+                        <!--                            android:gravity="center_vertical" />-->
 
-<!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                            android:id="@+id/mRBtn03"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="3개"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="20sp"-->
-<!--                            android:layout_marginRight="30dp"-->
-<!--                            android:gravity="center_vertical" />-->
+                        <!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
+                        <!--                            android:id="@+id/mRBtn03"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="3개"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:layout_marginRight="30dp"-->
+                        <!--                            android:gravity="center_vertical" />-->
 
-<!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                            android:id="@+id/mRBtn04"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="4개"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textSize="20sp"-->
-<!--                            android:gravity="center_vertical" />-->
+                        <!--                        <com.google.android.material.radiobutton.MaterialRadioButton-->
+                        <!--                            android:id="@+id/mRBtn04"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="4개"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="20sp"-->
+                        <!--                            android:gravity="center_vertical" />-->
                     </LinearLayout>
                 </LinearLayout>
 
@@ -255,8 +256,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="실시간 거리"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/text_view_title_size_small"
+                        android:textColor="@color/black"/>
 
                     <View
                         android:layout_width="0dp"
@@ -296,8 +297,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="실시간 각도"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/text_view_title_size_small"
+                        android:textColor="@color/black"/>
 
                     <View
                         android:layout_width="0dp"
@@ -337,8 +338,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="거리 최대값"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/text_view_title_size_small"
+                        android:textColor="@color/black"/>
 
                     <View
                         android:layout_width="0dp"
@@ -378,9 +379,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="각도 최대값"
-                        android:textStyle="bold"
-                        android:textSize="20sp" />
-
+                        android:textSize="@dimen/text_view_title_size_small"
+                        android:textColor="@color/black"/>
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -414,11 +414,12 @@
                 android:layout_height="wrap_content"
                 android:text="현재 위치"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_view_title_size_s"
                 android:layout_marginTop="50dp"
                 android:layout_marginStart="30dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_info" />
+                app:layout_constraintTop_toBottomOf="@+id/cl_info"
+                android:textColor="@color/black"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/mc_tv_current_location"
@@ -426,7 +427,7 @@
                 android:layout_height="wrap_content"
                 android:text="서울특별시 송파구 송파대로 167 B동 6층 B608호(문정동,문정역테라타워)"
                 android:textStyle="bold"
-                android:textSize="12sp"
+                android:textSize="@dimen/btn_gps_location"
                 android:textColor="#808080"
                 android:singleLine="false"
                 android:maxLines="2"
