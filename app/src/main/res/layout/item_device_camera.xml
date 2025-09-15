@@ -4,20 +4,6 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--    <TextView-->
-<!--        android:id="@+id/textTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="연결 가능한 기기"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-<!--    </TextView>-->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +11,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/rc_view_list"
+            android:id="@+id/rcViewList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/BluetoothSearchButton"
@@ -40,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp">
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/device_name"
+                    android:id="@+id/device_camera_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Device Name"
@@ -60,8 +46,8 @@
                     android:textSize="@dimen/blue_tooth_list_title_ip"
                     android:textColor="#7265E3"
                     android:layout_marginTop="15dp"
-                    app:layout_constraintStart_toStartOf="@+id/device_name"
-                    app:layout_constraintTop_toBottomOf="@+id/device_name">
+                    app:layout_constraintStart_toStartOf="@+id/device_camera_name"
+                    app:layout_constraintTop_toBottomOf="@+id/device_camera_name">
                 </com.google.android.material.textview.MaterialTextView>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>

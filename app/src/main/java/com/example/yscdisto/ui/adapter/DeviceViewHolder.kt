@@ -1,4 +1,4 @@
-package com.example.yscdisto
+package com.example.yscdisto.ui.adapter
 
 import android.Manifest
 import android.bluetooth.BluetoothDevice

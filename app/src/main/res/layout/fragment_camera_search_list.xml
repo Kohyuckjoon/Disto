@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.disto.DistoConnectFragment"
+    tools:context=".CameraSearchListFragment"
     android:background="@color/white">
 
     <TextView
         android:id="@+id/tvSearchList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="검색된 기기 목록"
+        android:text="검색된 기기 목록(카메라)"
         style="@style/textTitleStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

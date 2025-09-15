@@ -1,9 +1,10 @@
-package com.example.yscdisto
+package com.example.yscdisto.ui.adapter
 
 import android.bluetooth.BluetoothDevice
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yscdisto.ui.adapter.DeviceViewHolder
 import com.example.yscdisto.databinding.ItemDeviceBinding
 
 class DeviceAdapter (

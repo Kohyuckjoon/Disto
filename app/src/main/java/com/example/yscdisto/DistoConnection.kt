@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yscdisto.databinding.ActivityDistoConnectionBinding
+import com.example.yscdisto.ui.adapter.DeviceAdapter
 
 /**
  * Activity Bluetooth

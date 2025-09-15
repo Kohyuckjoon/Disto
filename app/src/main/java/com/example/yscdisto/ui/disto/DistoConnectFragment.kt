@@ -1,4 +1,4 @@
-package com.example.yscdisto
+package com.example.yscdisto.ui.disto
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
-import android.health.connect.datatypes.Device
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +18,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.yscdisto.ui.adapter.DeviceAdapter
 import com.example.yscdisto.databinding.FragmentDistoConnectBinding
 
 // TODO: Rename parameter arguments, choose names that match

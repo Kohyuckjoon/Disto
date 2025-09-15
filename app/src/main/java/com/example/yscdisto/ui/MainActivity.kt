@@ -1,14 +1,13 @@
-package com.example.yscdisto
+package com.example.yscdisto.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
-import androidx.fragment.app.replace
+import com.example.yscdisto.CameraSearchListFragment
+import com.example.yscdisto.ui.disto.DistoConnectFragment
+import com.example.yscdisto.R
+import com.example.yscdisto.ui.disto.StartMeasurementFragment
 import com.example.yscdisto.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,16 +19,7 @@ class MainActivity : AppCompatActivity() {
         dataBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(dataBinding.root)
 
-        // Test Code
-        /*dataBinding.distoConnention.setOnClickListener {
-            val intent = Intent(this, DistoConnection::class.java)
-            startActivity(intent)
-        }*/
-        dataBinding.mcBtn4.setOnClickListener {
-
-        }
-
-        dataBinding.mcBtn1.setOnClickListener {
+        dataBinding.mcDistioConn.setOnClickListener {
 //            val intent = Intent(this, DistoConnection::class.java)
 //            startActivity(intent)
             supportFragmentManager.commit {
@@ -38,17 +28,23 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        dataBinding.mcBtn4.setOnClickListener {
+        dataBinding.mcCameraConn.setOnClickListener {
+            supportFragmentManager.commit {
+                replace(R.id.fl_camera_conn, CameraSearchListFragment())
+                addToBackStack(null)
+            }
+        }
+
+        dataBinding.mcMeasurementList.setOnClickListener {
+
+        }
+
+        dataBinding.mcMeasurement.setOnClickListener {
             supportFragmentManager.commit {
                 replace(R.id.fl_start_measurement, StartMeasurementFragment())
                 addToBackStack(null)
                 Log.e("khj", "test_01");
             }
         }
-
-//        dataBinding.mcBtn4.setOnClickListener {
-//            val intent = Intent(this, StartMeasurement::class.java)
-//            startActivity(intent)
-//        }
     }
 }
