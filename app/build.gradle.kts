@@ -43,6 +43,8 @@ android {
 
 dependencies {
     implementation(libs.cardview) // CardView
+    implementation(libs.fragment)
+    implementation(libs.fragment.ktx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

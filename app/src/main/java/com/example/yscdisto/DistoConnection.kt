@@ -20,7 +20,9 @@ import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yscdisto.databinding.ActivityDistoConnectionBinding
 
-
+/**
+ * Activity Bluetooth
+ */
 class DistoConnection : AppCompatActivity() {
     private lateinit var dataBinding: ActivityDistoConnectionBinding
     private lateinit var adapter: DeviceAdapter
@@ -38,17 +40,18 @@ class DistoConnection : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dataBinding = ActivityDistoConnectionBinding.inflate(layoutInflater)
-        setContentView(dataBinding.root)
-
-        adapter = DeviceAdapter(mutableListOf()) { device ->
-            connectToDevice(device)
-        }
-
-        dataBinding.recyclerViewDevices.layoutManager = LinearLayoutManager(this)
-        dataBinding.recyclerViewDevices.adapter = adapter
-
-        checkPermissionsAndScan() //Bluetooth Scan
+        Log.e("khj", "test_run_A");
+//        dataBinding = ActivityDistoConnectionBinding.inflate(layoutInflater)
+//        setContentView(dataBinding.root)
+//
+//        adapter = DeviceAdapter(mutableListOf()) { device ->
+//            connectToDevice(device)
+//        }
+//
+//        dataBinding.recyclerViewDevices.layoutManager = LinearLayoutManager(this)
+//        dataBinding.recyclerViewDevices.adapter = adapter
+//
+//        checkPermissionsAndScan() //Bluetooth Scan
     }
 
     private fun checkPermissionsAndScan() {

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="distance_text_width">330dp</dimen> <!--input Box-->
+    <!-- main activity -->
+    <dimen name="tv_disto_conn">28sp</dimen>
+    <dimen name="tv_disto_conn_dis">18sp</dimen>
 
     <!-- main title -->
     <dimen name="text_view_title_size_b">45sp</dimen>
 
     <!-- 거리 / 각도 / 최대값 -->
+    <dimen name="distance_text_width">330dp</dimen> <!--input Box-->
     <dimen name="text_view_title_size_small">25sp</dimen>
     <dimen name="btn_auto_text_size">30sp</dimen>
     <dimen name="btn_auto_text_discription_size">20sp</dimen>
@@ -15,6 +18,6 @@
     <dimen name="btn_gps_location">19sp</dimen>
 
     <!-- Bluetooth List -->
-    <dimen name="blue_tooth_list_title">20sp</dimen>
-    <dimen name="blue_tooth_list_title_ip">10sp</dimen>
+    <dimen name="blue_tooth_list_title">38sp</dimen>
+    <dimen name="blue_tooth_list_title_ip">20sp</dimen>
 </resources>

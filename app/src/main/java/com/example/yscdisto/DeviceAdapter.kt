@@ -22,17 +22,28 @@ class DeviceAdapter (
     override fun getItemCount(): Int = devices.size
 
     fun addDevice(device: BluetoothDevice) {
-        if (devices.none { it.address == device.address }) {
-            devices.add(device)
-//            notifyItemInserted(devices.size - 1)
-            notifyDataSetChanged()
-        }
+        devices.add(device)
+        notifyItemInserted(devices.size - 1)
+    }
+
+    fun setDevices(newDevices: List<BluetoothDevice>) {
+        devices.clear()
+        devices.addAll(newDevices)
+        notifyDataSetChanged()
     }
 
     fun clearDevices() {
         devices.clear()
         notifyDataSetChanged()
     }
+
+//    fun addDevice(device: BluetoothDevice) {
+//        if (devices.none { it.address == device.address }) {
+//            devices.add(device)
+////            notifyItemInserted(devices.size - 1)
+//            notifyDataSetChanged()
+//        }
+//    }
 
 //    fun updateDevices(newDevices: List<BluetoothDevice>) {
 //        devices.clear()
