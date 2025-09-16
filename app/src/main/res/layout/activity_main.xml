@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/mc_distio_conn"
+            android:id="@+id/mc_project_create"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -26,9 +26,108 @@
             app:strokeWidth="1dp"
             app:cardCornerRadius="35dp"
             app:cardBackgroundColor="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/mc_camera_conn"
+            app:layout_constraintEnd_toStartOf="@+id/mc_project_select"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mc_tv_project_create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로젝트 생성"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_disto_conn"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="신규 프로젝트를 생성합니다."
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="@dimen/tv_disto_conn_dis"
+                    android:textStyle="bold"
+                    android:textColor="#7265E3"
+                    app:layout_constraintStart_toStartOf="@+id/mc_tv_project_create"
+                    app:layout_constraintTop_toBottomOf="@+id/mc_tv_project_create"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_project_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/mc_project_create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mc_project_create"
+            app:cardElevation="12dp"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginEnd="30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mc_tv_project_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로젝트 선택"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_disto_conn"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="프로젝트 목록 선택 / 삭제"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="@dimen/tv_disto_conn_dis"
+                    android:textStyle="bold"
+                    android:textColor="#7265E3"
+                    app:layout_constraintStart_toStartOf="@+id/mc_tv_project_select"
+                    app:layout_constraintTop_toBottomOf="@+id/mc_tv_project_select"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_distio_conn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:cardElevation="12dp"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/mc_camera_conn"
+            app:layout_constraintStart_toStartOf="@+id/mc_project_create"
+            app:layout_constraintTop_toBottomOf="@+id/mc_project_create">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -217,41 +316,41 @@
 
 
 
-<!--    <Button-->
-<!--        android:id="@+id/mc_distio_conn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="disto연결"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-<!--    </Button>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/mc_distio_conn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="disto연결"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+    <!--    </Button>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/mc_camera_conn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="카메라 연결"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/mc_btn1"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/mc_btn1">-->
-<!--    </Button>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/mc_camera_conn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="카메라 연결"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/mc_distio_conn"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/mc_distio_conn">-->
+    <!--    </Button>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/mc_measurement_list"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="측정 데이터 목록"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/camera_connection"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/camera_connection">-->
-<!--    </Button>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/mc_measurement_list"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="측정 데이터 목록"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/mc_camera_conn"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/mc_camera_conn">-->
+    <!--    </Button>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/mc_measurement"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="측정하기"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/mc_item_list"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/mc_item_list">-->
-<!--    </Button>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/mc_measurement"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="측정하기"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/mc_measurement_list"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/mc_measurement_list">-->
+    <!--    </Button>-->
 
 
     <!-- Disto 연결(Bluetooth) -->
