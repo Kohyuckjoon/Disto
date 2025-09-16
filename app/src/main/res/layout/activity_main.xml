@@ -352,6 +352,27 @@
     <!--        app:layout_constraintTop_toBottomOf="@id/mc_measurement_list">-->
     <!--    </Button>-->
 
+    <!-- 프로젝트 생성 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fl_project_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.fragment.app.FragmentContainerView>
+
+    <!-- 프로젝트 선택 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fl_project_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.fragment.app.FragmentContainerView>
 
     <!-- Disto 연결(Bluetooth) -->
     <androidx.fragment.app.FragmentContainerView
@@ -375,6 +396,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
     </androidx.fragment.app.FragmentContainerView>
 
+    <!-- 측정 데이터 목록 -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fl_measurement_list"
         android:layout_width="match_parent"
