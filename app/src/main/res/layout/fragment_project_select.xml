@@ -26,27 +26,36 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black" />
 
-        <LinearLayout
-            android:id="@+id/ll_info_select"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_project_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rc_project_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/BluetoothSearchButton"
+                android:layout_margin="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </com.google.android.material.card.MaterialCardView>
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
-        </LinearLayout>
+                android:layout_margin="30dp"
+                app:layout_constraintStart_toStartOf="@+id/cl_project_list"
+                app:layout_constraintEnd_toEndOf="@+id/cl_project_list"
+                app:layout_constraintTop_toTopOf="@+id/cl_project_list"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_project_list">
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

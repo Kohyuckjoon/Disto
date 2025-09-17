@@ -68,6 +68,7 @@
                         app:cardCornerRadius="10dp"
                         app:cardBackgroundColor="#E9ECEF">
                         <EditText
+                            android:id="@+id/et_project_name"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -112,6 +113,7 @@
                     app:cardCornerRadius="10dp"
                     app:cardBackgroundColor="#E9ECEF">
                     <EditText
+                        android:id="@+id/et_location_name"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -154,6 +156,7 @@
                     app:cardCornerRadius="10dp"
                     app:cardBackgroundColor="#E9ECEF">
                     <EditText
+                        android:id="@+id/et_sheet_number"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -196,6 +199,7 @@
                     app:cardCornerRadius="10dp"
                     app:cardBackgroundColor="#E9ECEF">
                     <EditText
+                        android:id="@+id/et_project_create_memo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
