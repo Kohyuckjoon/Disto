@@ -13,6 +13,10 @@
     <dimen name="btn_auto_text_size">30sp</dimen>
     <dimen name="btn_auto_text_discription_size">20sp</dimen>
 
+    <!-- 프로젝트 생성-->
+    <dimen name="project_create_input_box">330dp</dimen> <!--input Box-->
+    <dimen name="project_create_button">150dp</dimen> <!--input Box-->
+
     <!-- GPS text title (current)-->
     <dimen name="text_view_title_size_s">25sp</dimen>
     <dimen name="btn_gps_location">19sp</dimen>
