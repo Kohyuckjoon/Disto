@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProjectCreateFragment"
-    android:background="@color/white">
+    tools:context=".ui.disto.ProjectCreateFragment"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +26,7 @@
             android:textColor="@color/black" />
 
         <LinearLayout
-            android:id="@+id/ll_info"
+            android:id="@+id/ll_info_create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -212,8 +214,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            app:layout_constraintEnd_toEndOf="@+id/ll_info"
-            app:layout_constraintTop_toBottomOf="@+id/ll_info">
+            app:layout_constraintEnd_toEndOf="@+id/ll_info_create"
+            app:layout_constraintTop_toBottomOf="@+id/ll_info_create">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/mc_create_button"

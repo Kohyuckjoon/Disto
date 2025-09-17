@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -314,43 +316,60 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Test Button -->
+<!--    <Button-->
+<!--        android:id="@+id/mc_project_create"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="프로젝트 생성"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+<!--    </Button>-->
 
+<!--    <Button-->
+<!--        android:id="@+id/mc_project_select"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="프로젝트 선택"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/mc_project_create"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/mc_project_create">-->
+<!--    </Button>-->
 
-    <!--    <Button-->
-    <!--        android:id="@+id/mc_distio_conn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="disto연결"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent">-->
-    <!--    </Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/mc_distio_conn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="disto연결"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/mc_project_select"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/mc_project_select">-->
+<!--    </Button>-->
 
-    <!--    <Button-->
-    <!--        android:id="@+id/mc_camera_conn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="카메라 연결"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/mc_distio_conn"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/mc_distio_conn">-->
-    <!--    </Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/mc_camera_conn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="카메라 연결"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/mc_distio_conn"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/mc_distio_conn">-->
+<!--    </Button>-->
 
-    <!--    <Button-->
-    <!--        android:id="@+id/mc_measurement_list"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="측정 데이터 목록"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/mc_camera_conn"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/mc_camera_conn">-->
-    <!--    </Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/mc_measurement_list"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="측정 데이터 목록"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/mc_camera_conn"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/mc_camera_conn">-->
+<!--    </Button>-->
 
-    <!--    <Button-->
-    <!--        android:id="@+id/mc_measurement"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="측정하기"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/mc_measurement_list"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/mc_measurement_list">-->
-    <!--    </Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/mc_measurement"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="측정하기"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/mc_measurement_list"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/mc_measurement_list">-->
+<!--    </Button>-->
 
     <!-- 프로젝트 생성 -->
     <androidx.fragment.app.FragmentContainerView

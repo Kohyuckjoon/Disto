@@ -6,8 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DistoConnection"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
 
+    <!-- Bluetooth test code -->
 <!--    <Button-->
 <!--        android:id="@+id/btnScan"-->
 <!--        android:layout_width="wrap_content"-->
@@ -15,6 +18,7 @@
 <!--        android:text="블루투스 기기 검색"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
     <TextView
         android:id="@+id/tvSearchList"
         android:layout_width="wrap_content"
