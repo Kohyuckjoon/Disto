@@ -79,6 +79,7 @@ class ProjectSelectFragment : Fragment() {
             projectList.addAll(projects)
             projectAdapter.notifyDataSetChanged()
 
+            Log.e("khj", "로그 찍기")
             /* 프로젝트 리스트 존재 여부에 따라 View 처리 */
             if (projects.isEmpty()) {
                 binding.rcProjectList.visibility = View.GONE
