@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mc_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Project Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/project_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </com.google.android.material.textview.MaterialTextView>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="00:11:22:33:44:55"
+            android:textColor="#7265E3"
+            android:textSize="@dimen/project_list_title"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/cl_select_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mc_create_button"
+                android:layout_width="@dimen/project_select_button"
+                android:layout_height="wrap_content"
+                app:strokeWidth="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_margin="4dp"
+                    android:text="선 택"
+                    android:textSize="@dimen/text_view_title_size_small"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white">
+                </com.google.android.material.textview.MaterialTextView>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/mc_select_button"-->
+<!--                android:layout_width="@dimen/project_create_button"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:cardBackgroundColor="@color/black"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:strokeWidth="0dp">-->
+
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="선 택"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/text_view_title_size_small"-->
+<!--                    android:textStyle="bold"></com.google.android.material.textview.MaterialTextView>-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

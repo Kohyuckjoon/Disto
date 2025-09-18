@@ -13,9 +13,12 @@
     <dimen name="btn_auto_text_size">20sp</dimen>
     <dimen name="btn_auto_text_discription_size">15sp</dimen>
 
-    <!-- 프로젝트 생성-->
+    <!-- 프로젝트 생성 -->
     <dimen name="project_create_input_box">200dp</dimen> <!--input Box-->
     <dimen name="project_create_button">100dp</dimen> <!--input Box-->
+
+    <!-- 프로젝트 선택 -->
+    <dimen name="project_select_button">70dp</dimen> <!--button-->
 
     <!-- GPS text title (current)-->
     <dimen name="text_view_title_size_s">20sp</dimen>
@@ -24,6 +27,10 @@
     <!-- Bluetooth List -->
     <dimen name="blue_tooth_list_title">20sp</dimen>
     <dimen name="blue_tooth_list_title_ip">13sp</dimen>
+
+    <!-- Project List -->
+    <dimen name="project_title">18sp</dimen>
+    <dimen name="project_list_title">13sp</dimen>
 
     <!-- 측정 데이터 리스트 맨홀 타입 텍스트 -->
     <dimen name="tv_measure_manhol_type_title">10sp</dimen>

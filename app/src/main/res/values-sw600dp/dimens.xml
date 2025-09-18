@@ -17,6 +17,9 @@
     <dimen name="project_create_input_box">330dp</dimen> <!--input Box-->
     <dimen name="project_create_button">150dp</dimen> <!--input Box-->
 
+    <!-- 프로젝트 선택 -->
+    <dimen name="project_select_button">100dp</dimen> <!--button-->
+
     <!-- GPS text title (current)-->
     <dimen name="text_view_title_size_s">25sp</dimen>
     <dimen name="btn_gps_location">19sp</dimen>
@@ -24,4 +27,8 @@
     <!-- Bluetooth List -->
     <dimen name="blue_tooth_list_title">38sp</dimen>
     <dimen name="blue_tooth_list_title_ip">20sp</dimen>
+
+    <!-- Project List -->
+    <dimen name="project_title">27sp</dimen>
+    <dimen name="project_list_title">20sp</dimen>
 </resources>

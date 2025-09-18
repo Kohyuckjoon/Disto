@@ -1,4 +1,4 @@
-package com.example.yscdisto.ui
+package com.example.yscdisto.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

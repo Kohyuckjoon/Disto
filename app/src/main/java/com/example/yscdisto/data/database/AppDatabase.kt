@@ -1,9 +1,10 @@
-package com.example.yscdisto.ui
+package com.example.yscdisto.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.yscdisto.data.model.ProjectCreate
 
 
 @Database(entities = [ProjectCreate::class], version = 1)

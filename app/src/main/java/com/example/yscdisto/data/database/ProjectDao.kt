@@ -1,8 +1,9 @@
-package com.example.yscdisto.ui
+package com.example.yscdisto.data.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.yscdisto.data.model.ProjectCreate
 
 @Dao
 interface ProjectDao {

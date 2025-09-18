@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YSCDisto">
         <activity
-            android:name=".DistoConnection"
+            android:name=".viewmodel.DistoConnection"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

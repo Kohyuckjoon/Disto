@@ -1,11 +1,9 @@
-package com.example.yscdisto
+package com.example.yscdisto.viewmodel
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
-import android.bluetooth.BluetoothManager
-import android.bluetooth.le.BluetoothLeScanner
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -17,7 +15,6 @@ import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yscdisto.databinding.ActivityDistoConnectionBinding
 import com.example.yscdisto.ui.adapter.DeviceAdapter
 
