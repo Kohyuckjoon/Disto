@@ -4,10 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="30dp"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="20dp"
     android:layout_marginEnd="30dp"
     android:layout_marginBottom="10dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -46,7 +45,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/mc_create_button"
+                android:id="@+id/mc_select_button"
                 android:layout_width="@dimen/project_select_button"
                 android:layout_height="wrap_content"
                 app:strokeWidth="0dp"

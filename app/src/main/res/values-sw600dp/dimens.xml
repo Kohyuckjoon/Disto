@@ -31,4 +31,7 @@
     <!-- Project List -->
     <dimen name="project_title">27sp</dimen>
     <dimen name="project_list_title">20sp</dimen>
+
+    <!-- Main 화면 선택된 프로젝트 표시 -->
+    <dimen name="main_view_project_status">18sp</dimen>
 </resources>

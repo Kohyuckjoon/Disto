@@ -1,5 +1,6 @@
 package com.example.yscdisto.ui.disto
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -30,6 +31,19 @@ class ProjectSelectFragment : Fragment() {
     private val projectList = mutableListOf<ProjectCreate>()
     private lateinit var projectAdapter: ProjectAdapter
 
+    interface OnProjectSelectedListener {
+        fun onProjectSelected(project: ProjectCreate)
+    }
+
+    private var listener: OnProjectSelectedListener? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnProjectSelectedListener) {
+            listener = context
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +56,10 @@ class ProjectSelectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //RecyclerView 셋팅
-        projectAdapter = ProjectAdapter(projectList)
+        projectAdapter = ProjectAdapter(projectList) { projectCreate ->
+            Log.e("khj", "선택된 프로젝트(Fragment) : $projectCreate")
+            listener?.onProjectSelected(projectCreate)
+        }
 
         binding.rcProjectList.apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -62,16 +79,28 @@ class ProjectSelectFragment : Fragment() {
             projectList.addAll(projects)
             projectAdapter.notifyDataSetChanged()
 
+            /* 프로젝트 리스트 존재 여부에 따라 View 처리 */
+            if (projects.isEmpty()) {
+                binding.rcProjectList.visibility = View.GONE
+                binding.mcNoData.visibility = View.VISIBLE
+                Log.e("khj", "데이터가 존재하지 않음")
+            } else {
+                binding.rcProjectList.visibility = View.VISIBLE
+                binding.mcNoData.visibility = View.GONE
+                Log.e("khj", "데이터 존재")
+            }
+
         }
 
-        binding.rcProjectList.setOnClickListener {
-            lifecycleScope.launch {
-                val projects = AppDatabase.getDatabase(requireContext()).projectDao().getAllProjects()
-                projects.forEach {
-                    Log.e("DB_TEST", it.toString())
-                }
-            }
-        }
+        /* 테스트 코드 */
+//        binding.rcProjectList.setOnClickListener {
+//            lifecycleScope.launch {
+//                val projects = AppDatabase.getDatabase(requireContext()).projectDao().getAllProjects()
+//                projects.forEach {
+//                    Log.e("DB_TEST", it.toString())
+//                }
+//            }
+//        }
     }
 
     override fun onDestroyView() {

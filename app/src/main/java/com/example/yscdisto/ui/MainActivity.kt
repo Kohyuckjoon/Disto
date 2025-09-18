@@ -9,11 +9,12 @@ import com.example.yscdisto.ui.disto.ProjectCreateFragment
 import com.example.yscdisto.ui.disto.ProjectSelectFragment
 import com.example.yscdisto.ui.disto.DistoConnectFragment
 import com.example.yscdisto.R
+import com.example.yscdisto.data.model.ProjectCreate
 import com.example.yscdisto.ui.disto.StartMeasurementFragment
 import com.example.yscdisto.databinding.ActivityMainBinding
 import com.example.yscdisto.ui.disto.MeasurementListFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ProjectSelectFragment.OnProjectSelectedListener {
     private lateinit var viewBinding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-
 
         viewBinding.mcProjectCreate.setOnClickListener {
             supportFragmentManager.commit {
@@ -65,5 +65,12 @@ class MainActivity : AppCompatActivity() {
                 Log.e("khj", "test_01");
             }
         }
+    }
+
+    override fun onProjectSelected(project: ProjectCreate) {
+        viewBinding.mcProjectStatus.text = "프로젝트명 : ${project.name}"
+        Log.e("khj", "선택된 프로젝트(MainActivity) : $project")
+
+        supportFragmentManager.popBackStack()
     }
 }

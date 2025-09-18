@@ -7,13 +7,18 @@ import com.example.yscdisto.data.model.ProjectCreate
 import com.example.yscdisto.databinding.ItemProjectBinding
 
 class ProjectAdapter (
-    private val projects: List<ProjectCreate>
+    private val projects: List<ProjectCreate>,
+    private val onProjectSelected: (ProjectCreate) -> Unit
 ) : RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder>(){
 
     inner class ProjectViewHolder(val binding: ItemProjectBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(project: ProjectCreate) {
             binding.mcProjectName.text = project.name
-            binding.mcNumber.text = project.sheetNumber
+            binding.mcNumber.text = project.sheetNumber.toString()
+
+            binding.mcSelectButton.setOnClickListener {
+                onProjectSelected(project)
+            }
         }
     }
 
