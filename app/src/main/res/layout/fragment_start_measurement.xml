@@ -627,7 +627,7 @@
         android:layout_margin="30dp">
 
         <com.google.android.material.floatingtoolbar.FloatingToolbarLayout
-            android:id="@+id/a"
+            android:id="@+id/ft_measure_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/black"
