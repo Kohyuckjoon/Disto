@@ -229,7 +229,7 @@
                         android:layout_weight="1" />
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/tv_mc_distance_max"
+                        android:id="@+id/mc_distance_max"
                         android:layout_width="@dimen/distance_text_width"
                         android:layout_height="wrap_content"
                         app:strokeWidth="0dp"
@@ -251,11 +251,39 @@
 
             </LinearLayout>
 
+            <!-- 추후 현재 위치 개발 기능 예정 -->
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/mc_mv_loaction"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="현재 위치"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="@dimen/text_view_title_size_s"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cl_info"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/mc_tv_current_location"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="서울특별시 송파구 송파대로 167 B동 6층 B608호(문정동,문정역테라타워)"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="@dimen/btn_gps_location"-->
+<!--                android:textColor="#808080"-->
+<!--                android:singleLine="false"-->
+<!--                android:maxLines="2"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/mc_mv_loaction"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/mc_mv_loaction"/>-->
+
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/mc_mv_loaction"
+                android:id="@+id/mc_picture_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="현재 위치"
+                android:text="배관 촬영"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_view_title_size_s"
                 android:layout_marginTop="50dp"
@@ -264,57 +292,244 @@
                 app:layout_constraintTop_toBottomOf="@+id/cl_info"
                 android:textColor="@color/black"/>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/mc_tv_current_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="서울특별시 송파구 송파대로 167 B동 6층 B608호(문정동,문정역테라타워)"
-                android:textStyle="bold"
-                android:textSize="@dimen/btn_gps_location"
-                android:textColor="#808080"
-                android:singleLine="false"
-                android:maxLines="2"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="@+id/mc_mv_loaction"
-                app:layout_constraintTop_toBottomOf="@+id/mc_mv_loaction"/>
-
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layoutPicture"
+                android:id="@+id/cl_picture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintTop_toBottomOf="@+id/mc_tv_current_location"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/mc_picture_title">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcPickture"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
+                    android:layout_margin="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardBackgroundColor="#E9ECEF">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Picture"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:gravity="center">
+                    </com.google.android.material.textview.MaterialTextView>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mc_piping_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배관 재질"
+                android:textSize="@dimen/text_view_title_size_s"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_picture"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mc_essential_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textStyle="bold"
+                android:textSize="@dimen/tv_search_title"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@+id/mc_piping_title"
+                app:layout_constraintBottom_toBottomOf="@+id/mc_piping_title"
+                android:textColor="@color/red"/>
+
+            <LinearLayout
+                android:id="@+id/ll_input_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mc_piping_title">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mc_search_input_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="0dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardBackgroundColor="#E9ECEF"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#E9ECEF">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/iv_search_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/outline_search_24"
+                            android:layout_marginStart="7dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/tv_search_input_box"
+                            android:background="@android:color/transparent"
+                            android:hint="입력 하세요."
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_margin="7dp"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="10dp"
+                            app:layout_constraintStart_toEndOf="@+id/iv_search_button"
+                            app:layout_constraintTop_toTopOf="@+id/iv_search_button"
+                            app:layout_constraintBottom_toBottomOf="@+id/iv_search_button"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_input_box">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mc_reset_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:strokeWidth="0dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/black"
+                    android:layout_margin="10dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintEnd_toStartOf="@id/mc_create_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="초기화"
+                        android:textSize="@dimen/text_view_title_size_small_new"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
                 </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mc_create_button"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:layout_margin="5dp"
-                    android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:hint="Picture"
-                    app:layout_constraintStart_toStartOf="@+id/mcPickture"
-                    app:layout_constraintEnd_toEndOf="@+id/mcPickture"
-                    app:layout_constraintTop_toTopOf="@+id/mcPickture"
-                    app:layout_constraintBottom_toBottomOf="@+id/mcPickture">
-                </TextView>
+                    app:strokeWidth="0dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/black"
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toEndOf="@id/mc_reset_button"
+                    app:layout_constraintEnd_toStartOf="@id/mc_measure_result"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="뒤로가기"
+                        android:textSize="@dimen/text_view_title_size_small_new"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mc_measure_result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:strokeWidth="0dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/black"
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toEndOf="@id/mc_create_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="측정 결과 확인"
+                        android:textSize="@dimen/text_view_title_size_small_new"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="30dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/mc_search_input_box">-->
+
+<!--                -->
+<!--            </LinearLayout>-->
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/layout_picture"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent">-->
+<!--    -->
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/mc_pickture"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="400dp"-->
+<!--                    app:cardBackgroundColor="#E9ECEF"-->
+<!--                    app:cardCornerRadius="30dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="1.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="1.0"-->
+<!--                    app:strokeWidth="0dp">-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
+<!--    -->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:textSize="40sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:hint="Picture"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/mc_pickture"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/mc_pickture"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/mc_pickture">-->
+<!--                </TextView>-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 <!--            <LinearLayout-->

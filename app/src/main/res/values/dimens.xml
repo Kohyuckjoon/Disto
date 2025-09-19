@@ -10,6 +10,7 @@
     <!-- 거리 / 각도 / 최대값 -->
     <dimen name="distance_text_width">100dp</dimen> <!--input Box-->
     <dimen name="text_view_title_size_small">20sp</dimen>
+    <dimen name="text_view_title_size_small_new">17sp</dimen>
     <dimen name="btn_auto_text_size">20sp</dimen>
     <dimen name="btn_auto_text_discription_size">15sp</dimen>
 
@@ -20,7 +21,7 @@
     <!-- 프로젝트 선택 -->
     <dimen name="project_select_button">70dp</dimen> <!--button-->
 
-    <!-- GPS text title (current)-->
+    <!-- text title (current)-->
     <dimen name="text_view_title_size_s">20sp</dimen>
     <dimen name="btn_gps_location">14sp</dimen>
 
@@ -39,4 +40,11 @@
     <dimen name="tv_measure_manhol_type_title">10sp</dimen>
     <dimen name="tv_measure_manhol_type_title_new">15sp</dimen>
     <dimen name="tv_measure_time_title">15sp</dimen>
+
+    <!-- search title/input box -->
+    <dimen name="tv_search_title">17sp</dimen>
+    <dimen name="tv_search_input_box">18sp</dimen>
+
+    <!---->
+    <dimen name="btn_measure_result">150dp</dimen> <!--input Box-->
 </resources>

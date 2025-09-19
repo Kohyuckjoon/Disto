@@ -34,4 +34,8 @@
 
     <!-- Main 화면 선택된 프로젝트 표시 -->
     <dimen name="main_view_project_status">18sp</dimen>
+
+    <!-- search input box -->
+    <dimen name="tv_search_title">20sp</dimen>
+    <dimen name="tv_search_input_box">23sp</dimen>
 </resources>
