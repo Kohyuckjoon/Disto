@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.example.yscdisto.R
+import com.example.yscdisto.SaveDialogFragment
 import com.example.yscdisto.databinding.FragmentStartMeasurementBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -62,6 +65,12 @@ class StartMeasurementFragment : Fragment() {
 
                 else -> false
             }
+        }
+
+        binding.mcMeasureResult.setOnClickListener {
+            val dialog = SaveDialogFragment()
+            dialog.show(parentFragmentManager, "saveDialog")
+            Log.e("khj", "test_01")
         }
 
         return binding.root

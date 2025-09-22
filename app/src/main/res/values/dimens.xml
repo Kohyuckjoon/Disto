@@ -33,6 +33,17 @@
     <dimen name="project_title">18sp</dimen>
     <dimen name="project_list_title">13sp</dimen>
 
+    <!-- save title -->
+    <dimen name="save_popup_margin">200dp</dimen>
+    <dimen name="save_title">18sp</dimen>
+    <dimen name="save_title_medium">16sp</dimen>
+    <dimen name="save_sub_title">16sp</dimen>
+    <dimen name="save_date">14sp</dimen>
+    <dimen name="save_title_margin_low">10dp</dimen>
+    <dimen name="save_title_margin_low_new">15dp</dimen>
+    <dimen name="save_title_margin_mid">20dp</dimen>
+    <dimen name="save_title_margin_high">30dp</dimen>
+
     <!-- Main 화면 선택된 프로젝트 표시 -->
     <dimen name="main_view_project_status">13sp</dimen>
 
