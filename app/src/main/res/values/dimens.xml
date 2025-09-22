@@ -10,7 +10,7 @@
     <!-- 거리 / 각도 / 최대값 -->
     <dimen name="distance_text_width">100dp</dimen> <!--input Box-->
     <dimen name="text_view_title_size_small">20sp</dimen>
-    <dimen name="text_view_title_size_small_new">17sp</dimen>
+    <dimen name="text_view_title_size_small_new">13sp</dimen>
     <dimen name="btn_auto_text_size">20sp</dimen>
     <dimen name="btn_auto_text_discription_size">15sp</dimen>
 

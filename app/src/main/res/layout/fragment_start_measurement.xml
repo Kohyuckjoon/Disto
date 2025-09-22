@@ -30,139 +30,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:textColor="@color/black" />
 
-            <!-- 측정 상태 표시 줄 -->
-            <!--            <com.google.android.material.card.MaterialCardView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:cardElevation="12dp"-->
-            <!--                app:strokeWidth="0dp"-->
-            <!--                app:cardCornerRadius="40dp"-->
-            <!--                app:cardBackgroundColor="@color/white"-->
-            <!--                android:layout_marginRight="10dp"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="@id/tv_title"-->
-            <!--                app:layout_constraintBottom_toBottomOf="@+id/tv_title">-->
-
-            <!--                <LinearLayout-->
-            <!--                    android:id="@+id/cl_top_mc"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:gravity="center">-->
-
-            <!--                    <com.google.android.material.card.MaterialCardView-->
-            <!--                        android:id="@+id/card_mc_1"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_marginLeft="7dp"-->
-            <!--                        app:cardElevation="12dp"-->
-            <!--                        app:strokeWidth="1dp"-->
-            <!--                        app:cardCornerRadius="35dp"-->
-            <!--                        app:cardBackgroundColor="@color/white">-->
-
-            <!--                        <com.google.android.material.textview.MaterialTextView-->
-            <!--                            android:id="@+id/tv_mc_1"-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:text="측 정"-->
-            <!--                            android:textStyle="bold"-->
-            <!--                            android:textSize="18sp"-->
-            <!--                            android:layout_marginLeft="15dp"-->
-            <!--                            android:layout_marginRight="15dp"-->
-            <!--                            android:layout_marginTop="5dp"-->
-            <!--                            android:layout_marginBottom="5dp" />-->
-            <!--                    </com.google.android.material.card.MaterialCardView>-->
-
-            <!--                    <ImageView-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_marginLeft="7dp"-->
-            <!--                        android:src="@drawable/vector32" />-->
-
-            <!--                    <com.google.android.material.card.MaterialCardView-->
-            <!--                        android:id="@+id/card_mc_2"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_marginLeft="7dp"-->
-            <!--                        app:cardElevation="12dp"-->
-            <!--                        app:strokeWidth="1dp"-->
-            <!--                        app:cardCornerRadius="35dp"-->
-            <!--                        app:cardBackgroundColor="@color/white">-->
-
-            <!--                        <com.google.android.material.textview.MaterialTextView-->
-            <!--                            android:id="@+id/tv_mc_2"-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:text="측 정"-->
-            <!--                            android:textStyle="bold"-->
-            <!--                            android:textSize="18sp"-->
-            <!--                            android:layout_marginLeft="15dp"-->
-            <!--                            android:layout_marginRight="15dp"-->
-            <!--                            android:layout_marginTop="5dp"-->
-            <!--                            android:layout_marginBottom="5dp" />-->
-            <!--                    </com.google.android.material.card.MaterialCardView>-->
-
-            <!--                    <ImageView-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:src="@drawable/vector32"-->
-            <!--                        android:layout_marginLeft="7dp" />-->
-
-            <!--                    <com.google.android.material.card.MaterialCardView-->
-            <!--                        android:id="@+id/card_mc_3"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        app:cardElevation="12dp"-->
-            <!--                        app:strokeWidth="1dp"-->
-            <!--                        app:cardCornerRadius="35dp"-->
-            <!--                        android:layout_marginLeft="7dp"-->
-            <!--                        app:cardBackgroundColor="@color/white">-->
-
-            <!--                        <com.google.android.material.textview.MaterialTextView-->
-            <!--                            android:id="@+id/mcComplete3"-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:text="측 정"-->
-            <!--                            android:textStyle="bold"-->
-            <!--                            android:textSize="18sp"-->
-            <!--                            android:layout_marginLeft="15dp"-->
-            <!--                            android:layout_marginRight="15dp"-->
-            <!--                            android:layout_marginTop="5dp"-->
-            <!--                            android:layout_marginBottom="5dp" />-->
-            <!--                    </com.google.android.material.card.MaterialCardView>-->
-
-            <!--                    <ImageView-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:src="@drawable/vector32"-->
-            <!--                        android:layout_marginLeft="7dp" />-->
-
-            <!--                    <com.google.android.material.card.MaterialCardView-->
-            <!--                        android:id="@+id/card_mc_4"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        app:cardElevation="12dp"-->
-            <!--                        app:strokeWidth="1dp"-->
-            <!--                        app:cardCornerRadius="35dp"-->
-            <!--                        app:cardBackgroundColor="@color/white"-->
-            <!--                        android:layout_marginLeft="7dp"-->
-            <!--                        android:layout_marginRight="5dp">-->
-
-            <!--                        <com.google.android.material.textview.MaterialTextView-->
-            <!--                            android:id="@+id/tv_mc_4"-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:text="측 정"-->
-            <!--                            android:textStyle="bold"-->
-            <!--                            android:textSize="18sp"-->
-            <!--                            android:layout_marginLeft="15dp"-->
-            <!--                            android:layout_marginRight="15dp"-->
-            <!--                            android:layout_marginTop="5dp"-->
-            <!--                            android:layout_marginBottom="5dp" />-->
-            <!--                    </com.google.android.material.card.MaterialCardView>-->
-            <!--                </LinearLayout>-->
-            <!--            </com.google.android.material.card.MaterialCardView>-->
-
             <!-- 정보값 -->
             <LinearLayout
                 android:id="@+id/cl_info"
@@ -477,173 +344,72 @@
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </com.google.android.material.card.MaterialCardView>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="30dp"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/mc_search_input_box">-->
-
-<!--                -->
-<!--            </LinearLayout>-->
-
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/layout_picture"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="30dp"-->
-<!--                android:layout_marginEnd="30dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent">-->
-<!--    -->
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/mc_pickture"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="400dp"-->
-<!--                    app:cardBackgroundColor="#E9ECEF"-->
-<!--                    app:cardCornerRadius="30dp"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintHorizontal_bias="1.0"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:layout_constraintVertical_bias="1.0"-->
-<!--                    app:strokeWidth="0dp">-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-<!--    -->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:layout_margin="5dp"-->
-<!--                    android:textSize="40sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:hint="Picture"-->
-<!--                    app:layout_constraintStart_toStartOf="@+id/mc_pickture"-->
-<!--                    app:layout_constraintTop_toTopOf="@+id/mc_pickture"-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/mc_pickture">-->
-<!--                </TextView>-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:layout_marginStart="30dp"-->
-<!--                android:layout_marginEnd="30dp"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/layoutPicture">-->
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/mc_auto_btn"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    style="@style/BluetoothSearchButton"-->
-<!--                    android:layout_marginRight="10dp"-->
-<!--                    android:layout_marginBottom="35dp">-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_margin="30dp">-->
-
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_auto"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="관경 측경\n(auto)"-->
-<!--                            android:textSize="@dimen/btn_auto_text_size"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textStyle="bold" />-->
-
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_auto_discription"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="연속 측정을 시도합니다."-->
-<!--                            android:textSize="@dimen/btn_auto_text_discription_size"-->
-<!--                            android:textColor="#7265E3"-->
-<!--                            android:layout_marginTop="15dp"-->
-<!--                            android:textStyle="bold"/>-->
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/mc_manual"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_weight="1"-->
-<!--                    style="@style/BluetoothSearchButton"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:layout_marginBottom="35dp">-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_margin="30dp">-->
-
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_manual"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="관경 측경\n(manual)"-->
-<!--                            android:textSize="@dimen/btn_auto_text_size"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textStyle="bold" />-->
-
-<!--                        <com.google.android.material.textview.MaterialTextView-->
-<!--                            android:id="@+id/tv_manual_discripion"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="수동 측정을 시도합니다."-->
-<!--                            android:textSize="@dimen/btn_auto_text_discription_size"-->
-<!--                            android:textColor="#7265E3"-->
-<!--                            android:layout_marginTop="15dp"-->
-<!--                            android:textStyle="bold"/>-->
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-<!--            </LinearLayout>-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/ll_measure_controll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="30dp">
+        app:layout_constraintWidth_percent="0.5">
 
-        <com.google.android.material.floatingtoolbar.FloatingToolbarLayout
-            android:id="@+id/ft_measure_btn"
-            android:layout_width="wrap_content"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_auto_btn"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:backgroundTint="@null"
-            tools:ignore="MissingConstraints">
+            android:layout_weight="1"
+            style="@style/BluetoothSearchButton"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/c"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="30dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="관경 측경\n(수동)"
+                    android:textSize="@dimen/text_view_title_size_small_new"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_manual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/BluetoothSearchButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="관경 측경\n(auto)"
-                android:gravity="center"
-                android:textSize="@dimen/btn_auto_text_size"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_margin="20dp" />
-        </com.google.android.material.floatingtoolbar.FloatingToolbarLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:orientation="vertical"
+                android:layout_margin="30dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_manual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="관경 측경\n(자동)"
+                    android:textSize="@dimen/text_view_title_size_small_new"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
