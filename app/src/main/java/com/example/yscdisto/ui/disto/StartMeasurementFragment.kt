@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import com.example.yscdisto.R
@@ -29,11 +30,38 @@ class StartMeasurementFragment : Fragment() {
     ): View? {
         _binding = FragmentStartMeasurementBinding.inflate(inflater, container, false)
 
-        val floatingToolbar = binding.ftMeasureBtn
+        val floatingToolbar = binding.llMeasureControll
+
+        // 플로우팅 버튼 드래그를 위한 변수
+        var dX = 0f
+        var dY = 0f
 
         /* floating*/
-        floatingToolbar.setOnClickListener {
+        floatingToolbar.setOnTouchListener { v, event ->
+            when (event.action) {
+                //손가락을 눌렀을 때 기준 좌표 저장
+                MotionEvent.ACTION_DOWN -> {
+                    dX = v.x - event.rawX
+                    dY = v.y - event.rawY
+                    true
+                }
 
+                // 움직일 때 View 위치 갱신
+                MotionEvent.ACTION_MOVE -> {
+                    v.animate()
+                        .x(event.rawX + dX)
+                        .y(event.rawY + dY)
+                        .setDuration(0)
+                        .start()
+                    true
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.performClick() // 접근성 이벤트 보장
+                    true
+                }
+
+                else -> false
+            }
         }
 
         return binding.root
