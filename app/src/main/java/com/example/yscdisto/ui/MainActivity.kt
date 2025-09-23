@@ -2,6 +2,7 @@ package com.example.yscdisto.ui
 
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.example.yscdisto.ui.disto.CameraSearchListFragment
@@ -63,6 +64,14 @@ class MainActivity : AppCompatActivity(), ProjectSelectFragment.OnProjectSelecte
                 replace(R.id.fl_start_measurement, StartMeasurementFragment())
                 addToBackStack(null)
                 Log.e("khj", "test_01");
+            }
+        }
+
+        onBackPressedDispatcher.addCallback(this) {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                supportFragmentManager.popBackStack()
+            } else {
+                finish()
             }
         }
     }

@@ -1,5 +1,6 @@
-package com.example.yscdisto
+package com.example.yscdisto.ui.disto
 
+import android.R
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,6 @@ class SaveDialogFragment : DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -32,17 +32,24 @@ class SaveDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSaveDialogBinding.inflate(inflater, container, false)
+
+
+        binding.mcSaveButton.setOnClickListener {
+            val dialog = SaveCompliteFragment()
+            dialog.show(parentFragmentManager, "saveComplite")
+        }
+
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
-
+        /* Fragment -> Dialog Fragment */
         dialog?.window?.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         )
-        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog?.window?.setBackgroundDrawableResource(R.color.transparent)
     }
 
     override fun onDestroy() {
