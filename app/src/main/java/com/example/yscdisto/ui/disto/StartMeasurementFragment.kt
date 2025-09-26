@@ -76,6 +76,11 @@ class StartMeasurementFragment : Fragment() {
             }
         }
 
+        binding.mcMeasureResult.setOnClickListener {
+            val dialog = SaveDialogFragment()
+            dialog.show(parentFragmentManager, "saveComplite")
+        }
+
         binding.mcAutoBtn.setOnClickListener {
             val startMeasureCommand = byteArrayOf(0x02, 0x52, 0x03)
 
