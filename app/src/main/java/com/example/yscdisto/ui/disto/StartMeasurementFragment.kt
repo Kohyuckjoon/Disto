@@ -1,11 +1,14 @@
 package com.example.yscdisto.ui.disto
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.example.yscdisto.DistoCommandManager
 import com.example.yscdisto.databinding.FragmentStartMeasurementBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,6 +24,17 @@ private const val ARG_PARAM2 = "param2"
 class StartMeasurementFragment : Fragment() {
     private var _binding : FragmentStartMeasurementBinding? = null
     private val binding get() = _binding!!
+
+    private var distManager: DistoCommandManager? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is DistoCommandManager) {
+            distManager = context
+        } else {
+            throw RuntimeException("$context must implement DistoCommandManager")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,12 +76,27 @@ class StartMeasurementFragment : Fragment() {
             }
         }
 
-        binding.mcMeasureResult.setOnClickListener {
-            val dialog = SaveDialogFragment()
-            dialog.show(parentFragmentManager, "saveDialog")
+        binding.mcAutoBtn.setOnClickListener {
+            val startMeasureCommand = byteArrayOf(0x02, 0x52, 0x03)
+
+            if (distManager?.isDistoConnected() == true) {
+                val success = distManager?.sendMeasurementCommand(startMeasureCommand)
+                if (success == true) {
+                    Toast.makeText(context, "Disto D5로 측정 명령을 전송했습니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "명령 전송에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(context, "Disto D5 장비가 연결되지 않았습니다.", Toast.LENGTH_LONG).show()
+            }
         }
 
         return binding.root
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        distManager = null
     }
 
     override fun onDestroyView() {
