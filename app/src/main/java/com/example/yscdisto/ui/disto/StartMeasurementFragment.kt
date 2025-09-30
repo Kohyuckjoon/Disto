@@ -1,39 +1,44 @@
 package com.example.yscdisto.ui.disto
 
-import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.yscdisto.DistoCommandManager
+import androidx.fragment.app.Fragment
+import ch.leica.sdk.Devices.Device
+import com.example.yscdisto.data.device.YetiDeviceController
 import com.example.yscdisto.databinding.FragmentStartMeasurementBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
  * Use the [StartMeasurementFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class StartMeasurementFragment : Fragment() {
+class StartMeasurementFragment : Fragment(){
     private var _binding : FragmentStartMeasurementBinding? = null
     private val binding get() = _binding!!
 
-    private var distManager: DistoCommandManager? = null
+    private var yetiController: YetiDeviceController? = null
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is DistoCommandManager) {
-            distManager = context
-        } else {
-            throw RuntimeException("$context must implement DistoCommandManager")
-        }
+
+    private var isMeasuring = false
+    private val measureHandler = Handler(Looper.getMainLooper())
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -81,31 +86,77 @@ class StartMeasurementFragment : Fragment() {
             dialog.show(parentFragmentManager, "saveComplite")
         }
 
-        binding.mcAutoBtn.setOnClickListener {
-            val startMeasureCommand = byteArrayOf(0x02, 0x52, 0x03)
-
-            if (distManager?.isDistoConnected() == true) {
-                val success = distManager?.sendMeasurementCommand(startMeasureCommand)
-                if (success == true) {
-                    Toast.makeText(context, "Disto D5로 측정 명령을 전송했습니다.", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(context, "명령 전송에 실패했습니다.", Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                Toast.makeText(context, "Disto D5 장비가 연결되지 않았습니다.", Toast.LENGTH_LONG).show()
-            }
+        binding.mcAutoBtn.setOnClickListener { v ->
+            onClickSurveyToggle()
         }
+
+
+
+//        binding.mcAutoBtn.setOnClickListener {
+//            val startMeasureCommand = byteArrayOf(0x02, 0x52, 0x03)
+//
+//            if (distManager?.isDistoConnected() == true) {
+//                val success = distManager?.sendMeasurementCommand(startMeasureCommand)
+//                if (success == true) {
+//                    Toast.makeText(context, "Disto D5로 측정 명령을 전송했습니다.", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Toast.makeText(context, "명령 전송에 실패했습니다.", Toast.LENGTH_SHORT).show()
+//                }
+//            } else {
+//                Toast.makeText(context, "Disto D5 장비가 연결되지 않았습니다.", Toast.LENGTH_LONG).show()
+//            }
+//        }
 
         return binding.root
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        distManager = null
+    private fun onClickSurveyToggle() {
+        val dev: Device? = yetiController?.currentDevice
+
+        Log.e("KHJ", "dev : ${dev} + Device.ConnectionState.connect : ${Device.ConnectionState.connected}")
+
+        if (dev == null) {
+            showToast("먼저 Connect 화면에서 기기를 연결하세요.")
+            return
+        }
+
+        if (dev.getConnectionState() != Device.ConnectionState.connected) {
+            showToast("기기 재연결 시도 중...")
+            yetiController?.checkForReconnection(requireContext())
+            return
+        }
+
+        if (!isMeasuring) {
+            startMeasuring()
+        } else {
+            stopMeasuring(true)
+        }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    fun startMeasuring() {
+//        isMeasuring = true
+//        lastDistance = Double.NaN
+//        trendingUp = false
+//
+//        maxDistance = Double.NEGATIVE_INFINITY
+//        maxDistanceUnit = ""
+//        maxAngle = Double.NEGATIVE_INFINITY
+
+        if (binding != null) {
+            binding.tvDistance.setText("test");
+        }
+    }
+
+    private fun showToast(msg: String?) {
+        if (!isAdded()) return
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun stopMeasuring(showToast: Boolean) {
+        if (!isMeasuring) return
+        isMeasuring = false
+        measureHandler.removeCallbacksAndMessages(null)
+
+        if (showToast) showToast("측정을 중지했습니다.")
     }
 }

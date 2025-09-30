@@ -102,8 +102,21 @@
                         app:strokeWidth="0dp"
                         app:cardCornerRadius="10dp"
                         app:cardBackgroundColor="#E9ECEF">
-                        <EditText
-                            android:id="@+id/et_distance"
+<!--                        <EditText-->
+<!--                            android:id="@+id/et_distance"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="@android:color/transparent"-->
+<!--                            android:layout_margin="7dp"-->
+<!--                            android:paddingLeft="13dp"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:paddingBottom="5dp"-->
+<!--                            android:paddingRight="10dp"-->
+<!--                            android:hint="70">-->
+<!--                        </EditText>-->
+
+                        <TextView
+                            android:id="@+id/tv_distance"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -113,7 +126,7 @@
                             android:paddingBottom="5dp"
                             android:paddingRight="10dp"
                             android:hint="70">
-                        </EditText>
+                        </TextView>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
 
@@ -375,7 +388,7 @@
                 android:layout_margin="30dp">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_auto"
+                    android:id="@+id/btn_survey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="관경 측경\n(수동)"

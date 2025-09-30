@@ -26,6 +26,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import ch.leica.sdk.Devices.Device
 import com.example.yscdisto.DistoCommandManager
 import com.example.yscdisto.ui.adapter.DeviceAdapter
 import com.example.yscdisto.databinding.FragmentDistoConnectBinding
@@ -39,7 +40,7 @@ private const val ARG_PARAM2 = "param2"
 /**
  * Fragment Bluetooth
  */
-class DistoConnectFragment : Fragment() {
+class DistoConnectFragment : Fragment(){
     private lateinit var binding: FragmentDistoConnectBinding
 
     // 💡 변경 1: Context를 사용하지 않고, 늦게 초기화되도록 var로 변경
@@ -354,6 +355,4 @@ class DistoConnectFragment : Fragment() {
             bluetoothGatt = null
         }
     }
-
-    // TODO: newInstance() 등 나머지 코드는 필요에 따라 유지
 }
