@@ -1,4 +1,4 @@
-package com.example.yscdisto.ui.adapter
+package com.example.yscdisto.ui.adapter.kotlin
 
 import android.bluetooth.BluetoothDevice
 import android.view.LayoutInflater

@@ -16,7 +16,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.yscdisto.databinding.ActivityDistoConnectionBinding
-import com.example.yscdisto.ui.adapter.DeviceAdapter
+import com.example.yscdisto.ui.adapter.kotlin.DeviceAdapter
 
 /**
  * Activity Bluetooth

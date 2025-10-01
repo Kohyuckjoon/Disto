@@ -28,9 +28,9 @@ import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import ch.leica.sdk.Devices.Device
 import com.example.yscdisto.DistoCommandManager
-import com.example.yscdisto.ui.adapter.DeviceAdapter
 import com.example.yscdisto.databinding.FragmentDistoConnectBinding
 import com.example.yscdisto.ui.MainActivity
+import com.example.yscdisto.ui.adapter.kotlin.DeviceAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,6 +39,7 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * Fragment Bluetooth
+ * BLE 방식
  */
 class DistoConnectFragment : Fragment(){
     private lateinit var binding: FragmentDistoConnectBinding

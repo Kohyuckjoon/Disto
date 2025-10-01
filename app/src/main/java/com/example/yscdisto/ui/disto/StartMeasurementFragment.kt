@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import ch.leica.sdk.Devices.Device
-import com.example.yscdisto.data.device.YetiDeviceController
 import com.example.yscdisto.databinding.FragmentStartMeasurementBinding
 
 
@@ -23,8 +22,6 @@ import com.example.yscdisto.databinding.FragmentStartMeasurementBinding
 class StartMeasurementFragment : Fragment(){
     private var _binding : FragmentStartMeasurementBinding? = null
     private val binding get() = _binding!!
-
-    private var yetiController: YetiDeviceController? = null
 
 
     private var isMeasuring = false
@@ -111,21 +108,6 @@ class StartMeasurementFragment : Fragment(){
     }
 
     private fun onClickSurveyToggle() {
-        val dev: Device? = yetiController?.currentDevice
-
-        Log.e("KHJ", "dev : ${dev} + Device.ConnectionState.connect : ${Device.ConnectionState.connected}")
-
-        if (dev == null) {
-            showToast("먼저 Connect 화면에서 기기를 연결하세요.")
-            return
-        }
-
-        if (dev.getConnectionState() != Device.ConnectionState.connected) {
-            showToast("기기 재연결 시도 중...")
-            yetiController?.checkForReconnection(requireContext())
-            return
-        }
-
         if (!isMeasuring) {
             startMeasuring()
         } else {
